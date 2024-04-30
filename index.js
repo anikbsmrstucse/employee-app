@@ -9,13 +9,13 @@ const app=express()
 
 
 //middleware
-// app.use(cors())
+app.use(cors())
 
-app.use(cors({
-  origin: ['http://localhost:5173/', 'https://incomparable-pudding-212c9c.netlify.app/'],
-  methods: 'GET, POST, DELETE, PUT',
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: ['http://localhost:5173/', 'https://incomparable-pudding-212c9c.netlify.app/'],
+//   methods: 'GET, POST, DELETE, PUT',
+//   credentials: true,
+// }));
 app.use(express.json())
 
 const port=process.env.PORT||5000;
